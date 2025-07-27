@@ -1,29 +1,37 @@
 {
   "header": {
-    "services": "Szolgáltatásaink",
-    "portfolio": "Referenciák",
-    "pricing": "Áraink",
+    "services": "Szolgáltatások",
+    "portfolio": "Portfólió",
+    "pricing": "Árak",
     "contact": "Kapcsolat",
-    "get_quote": "Árajánlat Kérés"
+    "get_quote": "Ajánlatkérés"
   },
   "hero": {
-    "title": "Gyors és Precíz Weboldal Javítás",
-    "subtitle": "Törött, lassú vagy elavult weboldal? Segítek megújítani és felgyorsítani – 72 órán belül újra működik az oldalad, profi kezek között.",
-    "cta": "Javítsuk Meg Weboldalad",
-    "guarantee_72h": "72 órás garancia a határidőre",
-    "guarantee_satisfaction": "100% elégedettségi garancia",
-    "guarantee_experience": "Több mint 5 év szakmai tapasztalat",
-    "stats_fixed": "Megjavított Weboldalak Száma",
-    "stats_delivery": "Átlagos Szállítási Idő",
-    "stats_satisfaction": "Elégedett Ügyfelek Aránya"
+    "title": "Gyorsan Megjavítom Törött Weboldalát",
+    "subtitle": "Professzionális webfejlesztő, aki törött weboldalak mentésére, elavult tervek modernizálására és teljesítmény növelésére specializálódott. 72 órán belül újra online lesz az oldala.",
+    "cta": "Weboldal Javítása",
+    "guarantee_72h": "72 órás szállítási garancia",
+    "guarantee_satisfaction": "100% elégedettség",
+    "guarantee_experience": "5+ év tapasztalat",
+    "stats_fixed": "Megjavított Weboldalak",
+    "stats_delivery": "Átlagos Szállítás",
+    "stats_satisfaction": "Ügyfél Elégedettség"
   },
   "services": {
     "title": "Miben Segítek?",
-    "subtitle": "A hibás funkcióktól a dizájn modernizálásáig megújítom és fejlesztem weboldaladat, hogy még jobb legyen, mint valaha.",
+    "subtitle": "A hibás funkcióktól az elavult tervekig specializálódtam a weboldalak újjáélesztésére és jobbá tételére, mint valaha.",
     "repair_title": "Weboldal Javítás",
     "repair_description": "Elhárítom a hibákat, helyreállítom a működést, hogy weboldalad újra problémamentesen fusson.",
     "performance_title": "Teljesítmény Optimalizálás",
     "performance_description": "Felgyorsítom a lassú weboldalakat a legmodernebb technológiákkal és bevált módszerekkel.",
+    "mobile_title": "Mobil Reszponzivitás",
+    "mobile_description": "Biztosítom, hogy weboldalad tökéletesen nézzen ki és működjön minden eszközön, az asztali gépektől az okostelefonokig.",
+    "security_title": "Weboldal Biztonság",
+    "security_description": "Védje webhelyét a rosszindulatú programoktól, hackerektől és sebezhetőségektől átfogó biztonsági ellenőrzésekkel és javításokkal.",
+    "seo_title": "SEO Optimalizálás",
+    "seo_description": "Javítsa keresőmotoros rangsorolását és növelje az organikus forgalmat szakértő SEO stratégiákkal.",
+    "design_title": "Design Frissítés",
+    "design_description": "Modernizálja weboldala megjelenését és érzetét egy friss, felhasználóbarát, konvertáló designnal.",
     "emergency_title": "Sürgősségi Javítások",
     "emergency_subtitle": "Az oldal teljesen leállt? Gyors segítséget nyújtok 24 órán belül, hogy ne veszíts ügyfeleket.",
     "emergency_cta": "Sürgős Segítség Kérése"
@@ -32,7 +40,51 @@
     "title": "Sikertörténetek",
     "subtitle": "Nézd meg azokat a weboldalakat, amiket megmentettem: látványos fejlődés a sebességben, megjelenésben és használhatóságban.",
     "previous": "Előző",
-    "next": "Következő"
+    "next": "Következő",
+    "technologies_used": "Használt technológiák",
+    "key_results": "Főbb eredmények",
+    "projects": {
+      "ecommerce": {
+        "title": "E-kereskedelmi oldal újjáélesztése",
+        "category": "Teljesítmény és funkcionalitás",
+        "description": "Megmentettem egy hibás e-kereskedelmi oldalt, amelynek 3 másodperces betöltési ideje és 40%-os kosárelhagyási aránya volt. A betöltési időt 0,8 másodpercre csökkentettem, és a konverziókat 65%-kal növeltem.",
+        "results": {
+          "conversion": "65%-os konverziós növekedés",
+          "load_time": "0,8 másodperces betöltési idő",
+          "bounce_rate": "40%-kal csökkent a visszafordulási arány"
+        }
+      },
+      "restaurant": {
+        "title": "Éttermi weboldal modernizálása",
+        "category": "Design és mobil",
+        "description": "Egy elavult éttermi weboldalt modern, mobilbarát élménnyé alakítottam online rendelési integrációval.",
+        "results": {
+          "mobile_traffic": "Mobil forgalom +120%",
+          "online_orders": "Online rendelések +200%",
+          "user_engagement": "Felhasználói elkötelezettség +85%"
+        }
+      },
+      "corporate": {
+        "title": "Vállalati oldal biztonsági javítása",
+        "category": "Biztonság és SEO",
+        "description": "Kritikus biztonsági réseket javítottam és SEO legjobb gyakorlatokat vezettem be egy vállalati weboldalon, helyreállítva a Google büntetésekből.",
+        "results": {
+          "security_score": "100%-os biztonsági pontszám",
+          "seo_ranking": "SEO rangsor +300%",
+          "page_speed": "Oldal sebesség +90%"
+        }
+      },
+      "saas": {
+        "title": "SaaS platform optimalizálása",
+        "category": "Teljesítmény és UX",
+        "description": "Optimalizáltam egy lassú SaaS platformot, javítva az adatbázis-lekérdezéseket és modern UI/UX mintákat implementálva a felhasználói megtartás javítása érdekében.",
+        "results": {
+          "faster_queries": "5x gyorsabb lekérdezések",
+          "user_retention": "Felhasználói megtartás +45%",
+          "support_tickets": "Támogatási jegyek -60%"
+        }
+      }
+    }
   },
   "pricing": {
     "title": "Átlátható, Fix Árak",
@@ -40,16 +92,51 @@
     "quick_fix_name": "Gyors Javítás",
     "quick_fix_description": "Gyors megoldás kisebb hibákra és sürgős javításokra.",
     "quick_fix_cta": "Most Javítsuk Meg!",
+    "quick_fix": {
+      "features": {
+        "bug_fixes": "Hibajavítások és hibaelhárítás",
+        "basic_performance": "Alapvető teljesítményoptimalizálás",
+        "mobile_check": "Mobil reszponzivitás ellenőrzése",
+        "revisions": "2 felülvizsgálati kör",
+        "delivery": "48 órás szállítás",
+        "email_support": "E-mail támogatás"
+      }
+    },
     "complete_rescue_name": "Teljes Mentés",
     "complete_rescue_description": "Átfogó weboldal helyreállítás és hibajavítás.",
     "complete_rescue_cta": "Mentse Meg Weboldalát",
+    "complete_rescue": {
+      "features": {
+        "everything_quick_fix": "Minden a Gyors Javítás csomagból",
+        "security_audit": "Teljes biztonsági audit és javítások",
+        "seo_optimization": "SEO optimalizálás",
+        "design_improvements": "Design fejlesztések",
+        "performance_optimization": "Teljesítményoptimalizálás",
+        "content_migration": "Tartalom migráció"
+      }
+    },
     "full_transformation_name": "Teljes Átalakítás",
     "full_transformation_description": "Modern dizájn és teljes funkcionalitás‑frissítés a weboldaladnak.",
     "full_transformation_cta": "Alakítsuk Át Weboldalad",
+    "full_transformation": {
+      "features": {
+        "everything_complete_rescue": "Minden a Teljes Mentés csomagból",
+        "design_overhaul": "Modern design átalakítás",
+        "custom_functionality": "Egyedi funkcionalitás",
+        "advanced_seo": "Haladó SEO beállítás",
+        "analytics_implementation": "Analitika implementáció",
+        "training_documentation": "Képzés és dokumentáció",
+        "priority_support": "Prioritásos támogatás"
+      }
+    },
     "popular_tag": "Legkedveltebb",
+    "one_time": "egyszeri",
+    "delivered_in": "Szállítási idő:",
     "guarantee_title": "100% Elégedettségi Garancia",
     "guarantee_subtitle": "Ha nem vagy elégedett, visszafizetem a pénzed – kérdés nélkül. Minden projektem mögött teljes körű garancia áll.",
-    "guarantee_money_back": "Pénzvisszafizetési Garancia"
+    "guarantee_money_back": "Pénzvisszafizetési Garancia",
+    "fast_delivery": "Gyors szállítás",
+    "quality_guaranteed": "Minőség garantált"
   },
   "contact": {
     "title": "Ingyenes Weboldal Átvizsgálás",
@@ -61,7 +148,23 @@
     "form_sending": "Küldés folyamatban...",
     "message_sent_title": "Köszönöm! Üzeneted Megérkezett.",
     "message_sent_text": "Átnézem az oldaladat, és 2 órán belül részletes visszajelzéssel, megoldási javaslattal jelentkezem.",
-    "send_another_message": "Új Üzenet Küldése"
+    "send_another_message": "Új Üzenet Küldése",
+    "lets_talk": "Beszéljünk!",
+    "response_time": "Válaszidő",
+    "email": "E-mail",
+    "emergency_line": "Sürgősségi vonal",
+    "need_urgent_help": "Sürgős segítségre van szüksége?",
+    "urgent_help_description": "Ha weboldala teljesen leállt, vagy kritikus problémával küzd, használja sürgősségi vonalunkat.",
+    "call_now": "Hívjon most",
+    "website_url": "Weboldal URL",
+    "service_needed": "Szükséges szolgáltatás",
+    "select_service": "Válasszon szolgáltatást",
+    "quick_fix_option": "Gyors Javítás",
+    "complete_rescue_option": "Teljes Mentés",
+    "full_transformation_option": "Teljes Átalakítás",
+    "free_consultation_option": "Ingyenes Konzultáció",
+    "urgency_level": "Sürgősségi szint",
+    "message_placeholder": "Írja le weboldala problémáit, mit próbált már, és mit szeretne elérni."
   },
   "footer": {
     "description": "Webfejlesztő szakértőként törött és elavult weboldalak megmentésére és modernizálására szakosodtam.",
