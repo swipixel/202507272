@@ -3,9 +3,11 @@ import { Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useScrollAnimation, fadeInUp, staggerContainer, slideInLeft, slideInRight, sectionTransition } from '../hooks/useScrollAnimation';
 import emailjs from 'emailjs-com';
+import { useTranslation } from 'react-i18next'; // Import useTranslation
 
 const Contact = () => {
   const { ref, isInView } = useScrollAnimation(0.1);
+  const { t } = useTranslation(); // Initialize useTranslation
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -67,16 +69,15 @@ const Contact = () => {
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
                 <Send className="h-8 w-8 text-emerald-600" />
               </div>
-              <h2 className="text-3xl font-bold text-white mb-4 animate-text-glow">Message Sent!</h2>
+              <h2 className="text-3xl font-bold text-white mb-4 animate-text-glow">{t('contact.message_sent_title')}</h2>
               <p className="text-lg text-white/90 mb-6">
-                Thanks for reaching out! I'll review your website and get back to you within 2 hours 
-                with a detailed assessment and timeline.
+                {t('contact.message_sent_text')}
               </p>
               <button 
                 onClick={() => setSubmitted(false)}
                 className="bg-white text-emerald-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 micro-button cursor-magnetic"
               >
-                Send Another Message
+                {t('contact.send_another_message')}
               </button>
             </motion.div>
           </div>
@@ -112,14 +113,13 @@ const Contact = () => {
             className="text-3xl md:text-4xl font-bold text-white mb-4"
             variants={fadeInUp}
           >
-            Get Your Free Website Assessment
+            {t('contact.title')}
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-300 max-w-3xl mx-auto"
             variants={fadeInUp}
           >
-            Send me your website URL and I'll provide a detailed report of what's broken 
-            and how to fix it - completely free, no strings attached.
+            {t('contact.subtitle')}
           </motion.p>
         </motion.div>
 
@@ -136,7 +136,7 @@ const Contact = () => {
                 className="text-2xl font-bold text-white mb-6 animate-text-glow"
                 variants={fadeInUp}
               >
-                Let's Talk
+                {t('contact.lets_talk')}
               </motion.h3>
               
               <motion.div 
@@ -149,7 +149,7 @@ const Contact = () => {
                 >
                   <Clock className="h-6 w-6 text-blue-400 mr-4 mt-1 animate-pulse group-hover:text-blue-300 micro-icon" />
                   <div>
-                    <h4 className="text-white font-semibold group-hover:text-blue-300 transition-colors duration-300 micro-text">Response Time</h4>
+                    <h4 className="text-white font-semibold group-hover:text-blue-300 transition-colors duration-300 micro-text">{t('contact.response_time')}</h4>
                     <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300 micro-text">Usually within 2 hours</p>
                   </div>
                 </motion.div>
@@ -160,7 +160,7 @@ const Contact = () => {
                 >
                   <Mail className="h-6 w-6 text-blue-400 mr-4 mt-1 animate-pulse group-hover:text-blue-300 micro-icon" />
                   <div>
-                    <h4 className="text-white font-semibold group-hover:text-blue-300 transition-colors duration-300 micro-text">Email</h4>
+                    <h4 className="text-white font-semibold group-hover:text-blue-300 transition-colors duration-300 micro-text">{t('contact.email')}</h4>
                     <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300 micro-text">info@swipixel.com</p>
                   </div>
                 </motion.div>
@@ -171,7 +171,7 @@ const Contact = () => {
                 >
                   <Phone className="h-6 w-6 text-blue-400 mr-4 mt-1 animate-pulse group-hover:text-blue-300 micro-icon" />
                   <div>
-                    <h4 className="text-white font-semibold group-hover:text-blue-300 transition-colors duration-300 micro-text">Emergency Line</h4>
+                    <h4 className="text-white font-semibold group-hover:text-blue-300 transition-colors duration-300 micro-text">{t('contact.emergency_line')}</h4>
                     <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300 micro-text">+1 555 400 3034</p>
                     <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300 micro-text">For urgent fixes only</p>
                   </div>
@@ -184,12 +184,12 @@ const Contact = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10">
-                  <h4 className="text-white font-semibold mb-2 animate-text-glow">Need Urgent Help?</h4>
+                  <h4 className="text-white font-semibold mb-2 animate-text-glow">{t('contact.need_urgent_help')}</h4>
                   <p className="text-white/90 text-sm mb-4">
-                    Website completely down? Call the emergency line for same-day fixes.
+                    {t('contact.urgent_help_description')}
                   </p>
                   <button className="bg-white text-blue-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 animate-bounce-subtle micro-button cursor-magnetic">
-                    Call Now
+                    {t('contact.call_now')}
                   </button>
                 </div>
               </motion.div>
@@ -209,7 +209,7 @@ const Contact = () => {
                 variants={staggerContainer}
               >
                 <motion.div variants={fadeInUp}>
-                  <label className="block text-white font-semibold mb-2">Your Name *</label>
+                  <label className="block text-white font-semibold mb-2">{t('contact.form_name_label')}</label>
                   <input
                     type="text"
                     name="name"
@@ -221,7 +221,7 @@ const Contact = () => {
                   />
                 </motion.div>
                 <motion.div variants={fadeInUp}>
-                  <label className="block text-white font-semibold mb-2">Email Address *</label>
+                  <label className="block text-white font-semibold mb-2">{t('contact.form_email_label')}</label>
                   <input
                     type="email"
                     name="email"
@@ -239,7 +239,7 @@ const Contact = () => {
                 variants={staggerContainer}
               >
                 <motion.div variants={fadeInUp}>
-                  <label className="block text-white font-semibold mb-2">Website URL</label>
+                  <label className="block text-white font-semibold mb-2">{t('contact.website_url')}</label>
                   <input
                     type="url"
                     name="website"
@@ -250,24 +250,24 @@ const Contact = () => {
                   />
                 </motion.div>
                 <motion.div variants={fadeInUp}>
-                  <label className="block text-white font-semibold mb-2">Service Needed</label>
+                  <label className="block text-white font-semibold mb-2">{t('contact.service_needed')}</label>
                   <select
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
                     className="w-full bg-gray-800/80 border border-gray-700/50 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 hover:bg-gray-700/80 micro-hover cursor-hover"
                   >
-                    <option value="">Select a service</option>
-                    <option value="quick-fix">Quick Fix ($15)</option>
-                    <option value="complete-rescue">Complete Rescue ($50)</option>
-                    <option value="full-transformation">Full Transformation ($75)</option>
-                    <option value="consultation">Free Consultation</option>
+                    <option value="">{t('contact.select_service')}</option>
+                    <option value="quick-fix">{t('contact.quick_fix_option')}</option>
+                    <option value="complete-rescue">{t('contact.complete_rescue_option')}</option>
+                    <option value="full-transformation">{t('contact.full_transformation_option')}</option>
+                    <option value="consultation">{t('contact.free_consultation_option')}</option>
                   </select>
                 </motion.div>
               </motion.div>
 
               <motion.div className="mb-6" variants={fadeInUp}>
-                <label className="block text-white font-semibold mb-2">Urgency Level</label>
+                <label className="block text-white font-semibold mb-2">{t('contact.urgency_level')}</label>
                 <div className="flex gap-4">
                   {['normal', 'urgent', 'emergency'].map((level) => (
                     <label key={level} className="flex items-center hover:scale-105 transition-transform duration-300 cursor-pointer micro-scale cursor-hover">
@@ -286,7 +286,7 @@ const Contact = () => {
               </motion.div>
 
               <motion.div className="mb-8" variants={fadeInUp}>
-                <label className="block text-white font-semibold mb-2">Describe Your Issues *</label>
+                <label className="block text-white font-semibold mb-2">{t('contact.form_message_label')}</label>
                 <textarea
                   name="message"
                   value={formData.message}
@@ -294,7 +294,7 @@ const Contact = () => {
                   required
                   rows={6}
                   className="w-full bg-gray-800/80 border border-gray-700/50 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 hover:bg-gray-700/80 resize-none micro-hover cursor-hover"
-                  placeholder="Tell me what's wrong with your website, what problems you're experiencing, and what you'd like to achieve..."
+                  placeholder={t('contact.message_placeholder')}
                 />
               </motion.div>
 
@@ -309,12 +309,12 @@ const Contact = () => {
                 {isSubmitting ? (
                   <>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                    Sending...
+                    {t('contact.form_sending')}
                   </>
                 ) : (
                   <>
                     <Send className="h-5 w-5 mr-2 ml-5" />
-                    Send Message & Get Free Assessment
+                    {t('contact.form_submit_button')}
                   </>
                 )}
               </motion.button>
