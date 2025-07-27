@@ -2,17 +2,19 @@ import React from 'react';
 import { Check, Zap, Shield, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useScrollAnimation, fadeInUp, staggerContainer, scaleIn, sectionTransition } from '../hooks/useScrollAnimation';
+import { useTranslation } from 'react-i18next'; // Import useTranslation
 
 const Pricing = () => {
   const { ref, isInView } = useScrollAnimation(0.1);
+  const { t } = useTranslation(); // Initialize useTranslation
 
   const plans = [
     {
-      name: "Quick Fix",
+      name: t("pricing.quick_fix_name"),
       price: "$15",
       duration: "24-48 hours",
       icon: <Zap className="h-8 w-8" />,
-      description: "Perfect for urgent fixes and minor issues",
+      description: t("pricing.quick_fix_description"),
       features: [
         "Bug fixes and error resolution",
         "Basic performance optimization",
@@ -22,14 +24,14 @@ const Pricing = () => {
         "Email support"
       ],
       popular: false,
-      cta: "Fix My Website"
+      cta: t("pricing.quick_fix_cta")
     },
     {
-      name: "Complete Rescue",
+      name: t("pricing.complete_rescue_name"),
       price: "$50",
       duration: "3-5 days",
       icon: <Shield className="h-8 w-8" />,
-      description: "Comprehensive website restoration and improvement",
+      description: t("pricing.complete_rescue_description"),
       features: [
         "Everything in Quick Fix",
         "Full security audit & fixes",
@@ -39,14 +41,14 @@ const Pricing = () => {
         "Content migration"
       ],
       popular: true,
-      cta: "Rescue My Website"
+      cta: t("pricing.complete_rescue_cta")
     },
     {
-      name: "Full Transformation",
+      name: t("pricing.full_transformation_name"),
       price: "$75",
       duration: "1-2 weeks",
       icon: <Star className="h-8 w-8" />,
-      description: "Complete website overhaul and modernization",
+      description: t("pricing.full_transformation_description"),
       features: [
         "Everything in Complete Rescue",
         "Modern design overhaul",
@@ -57,7 +59,7 @@ const Pricing = () => {
         "Priority support"
       ],
       popular: false,
-      cta: "Transform My Website"
+      cta: t("pricing.full_transformation_cta")
     }
   ];
 
@@ -95,14 +97,13 @@ const Pricing = () => {
             className="text-3xl md:text-4xl font-bold text-white mb-4"
             variants={fadeInUp}
           >
-            Transparent Pricing
+            {t('pricing.title')}
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-300 max-w-3xl mx-auto"
             variants={fadeInUp}
           >
-            No hidden fees, no hourly billing surprises. Choose the package that fits your needs 
-            and get your website fixed fast.
+            {t('pricing.subtitle')}
           </motion.p>
         </motion.div>
 
@@ -127,7 +128,7 @@ const Pricing = () => {
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 animate-bounce-subtle">
                   <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
-                    Most Popular
+                    {t('pricing.popular_tag')}
                   </span>
                 </div>
               )}
@@ -194,14 +195,13 @@ const Pricing = () => {
               className="text-2xl font-bold mb-4 animate-text-glow"
               variants={fadeInUp}
             >
-              100% Satisfaction Guarantee
+              {t('pricing.guarantee_title')}
             </motion.h3>
             <motion.p 
               className="text-lg mb-6 opacity-90"
               variants={fadeInUp}
             >
-            Not happy with the results? Get your money back, no questions asked. 
-            I stand behind every project with a full satisfaction guarantee.
+            {t('pricing.guarantee_subtitle')}
             </motion.p>
             <motion.div 
               className="flex flex-wrap justify-center gap-8 text-sm opacity-90"
@@ -212,7 +212,7 @@ const Pricing = () => {
                 variants={fadeInUp}
               >
                 <Shield className="h-4 w-4 mr-2 animate-pulse" />
-              Money-back guarantee
+              {t('pricing.guarantee_money_back')}
               </motion.div>
               <motion.div 
                 className="flex items-center hover:scale-105 transition-transform duration-300 micro-magnetic cursor-hover"
