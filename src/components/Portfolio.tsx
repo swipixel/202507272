@@ -9,10 +9,12 @@ import {
   slideInRight,
   sectionTransition,
 } from '../hooks/useScrollAnimation';
+import { useTranslation } from 'react-i18next'; // Import useTranslation
 
 const Portfolio = () => {
   const [activeProject, setActiveProject] = useState(0);
   const { ref, isInView } = useScrollAnimation(0.1);
+  const { t } = useTranslation(); // Initialize useTranslation
 
   const projects = [
     {
@@ -93,14 +95,13 @@ const Portfolio = () => {
           animate={isInView ? 'visible' : 'hidden'}
         >
           <motion.h2 className="text-3xl md:text-4xl font-bold text-white mb-4" variants={fadeInUp}>
-            Success Stories
+            {t('portfolio.title')}
           </motion.h2>
           <motion.p
             className="text-xl text-gray-300 max-w-3xl mx-auto"
             variants={fadeInUp}
           >
-            Real websites I've rescued and transformed. See the dramatic improvements
-            in performance, design, and user experience.
+            {t('portfolio.subtitle')}
           </motion.p>
         </motion.div>
 
@@ -184,13 +185,6 @@ const Portfolio = () => {
                         ))}
                       </div>
                     </div>
-
-                    {/*<div className="flex gap-4">
-                      <button className="flex items-center bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group micro-button cursor-magnetic">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        View Case Study
-                      </button>
-                    </div>*/}
                   </motion.div>
                 </AnimatePresence>
               </motion.div>
@@ -211,7 +205,7 @@ const Portfolio = () => {
               whileTap={{ scale: 0.98 }}
             >
               <ArrowLeft className="h-5 w-5 mr-2 group-hover:-translate-x-1 transition-transform duration-300" />
-              Previous
+              {t('portfolio.previous')}
             </motion.button>
 
             <div className="flex space-x-2">
@@ -236,7 +230,7 @@ const Portfolio = () => {
               whileHover={{ scale: 1.05, x: 5 }}
               whileTap={{ scale: 0.98 }}
             >
-              Next
+              {t('portfolio.next')}
               <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </motion.button>
           </motion.div>
