@@ -15,13 +15,13 @@ const Pricing = () => {
       duration: "24-48 hours",
       icon: <Zap className="h-8 w-8" />,
       description: t("pricing.quick_fix_description"),
-      features: [
-        "Bug fixes and error resolution",
-        "Basic performance optimization",
-        "Mobile responsiveness check",
-        "2 rounds of revisions",
-        "48-hour delivery",
-        "Email support"
+      featuresKeys: [
+        "pricing.quick_fix.features.bug_fixes",
+        "pricing.quick_fix.features.basic_performance",
+        "pricing.quick_fix.features.mobile_check",
+        "pricing.quick_fix.features.revisions",
+        "pricing.quick_fix.features.delivery",
+        "pricing.quick_fix.features.email_support"
       ],
       popular: false,
       cta: t("pricing.quick_fix_cta")
@@ -32,13 +32,13 @@ const Pricing = () => {
       duration: "3-5 days",
       icon: <Shield className="h-8 w-8" />,
       description: t("pricing.complete_rescue_description"),
-      features: [
-        "Everything in Quick Fix",
-        "Full security audit & fixes",
-        "SEO optimization",
-        "Design improvements",
-        "Performance optimization",
-        "Content migration"
+      featuresKeys: [
+        "pricing.complete_rescue.features.everything_quick_fix",
+        "pricing.complete_rescue.features.security_audit",
+        "pricing.complete_rescue.features.seo_optimization",
+        "pricing.complete_rescue.features.design_improvements",
+        "pricing.complete_rescue.features.performance_optimization",
+        "pricing.complete_rescue.features.content_migration"
       ],
       popular: true,
       cta: t("pricing.complete_rescue_cta")
@@ -49,14 +49,14 @@ const Pricing = () => {
       duration: "1-2 weeks",
       icon: <Star className="h-8 w-8" />,
       description: t("pricing.full_transformation_description"),
-      features: [
-        "Everything in Complete Rescue",
-        "Modern design overhaul",
-        "Custom functionality",
-        "Advanced SEO setup",
-        "Analytics implementation",
-        "Training & documentation",
-        "Priority support"
+      featuresKeys: [
+        "pricing.full_transformation.features.everything_complete_rescue",
+        "pricing.full_transformation.features.design_overhaul",
+        "pricing.full_transformation.features.custom_functionality",
+        "pricing.full_transformation.features.advanced_seo",
+        "pricing.full_transformation.features.analytics_implementation",
+        "pricing.full_transformation.features.training_documentation",
+        "pricing.full_transformation.features.priority_support"
       ],
       popular: false,
       cta: t("pricing.full_transformation_cta")
@@ -145,12 +145,12 @@ const Pricing = () => {
 
                 <div className="mb-6">
                   <span className="text-4xl font-bold text-white animate-counter">{plan.price}</span>
-                  <span className="text-gray-300 ml-2">one-time</span>
-                  <div className="text-sm text-gray-400 mt-1">Delivered in {plan.duration}</div>
+                  <span className="text-gray-300 ml-2">{t('pricing.one_time')}</span>
+                  <div className="text-sm text-gray-400 mt-1">{t('pricing.delivered_in')} {plan.duration}</div>
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.featuresKeys.map((featureKey, featureIndex) => (
                     <motion.li 
                       key={featureIndex} 
                       className="flex items-start hover:text-gray-200 transition-colors duration-300"
@@ -159,7 +159,7 @@ const Pricing = () => {
                       transition={{ delay: featureIndex * 0.1 }}
                     >
                       <Check className="h-5 w-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0 animate-pulse" />
-                      <span className="text-gray-300">{feature}</span>
+                      <span className="text-gray-300">{t(featureKey)}</span>
                     </motion.li>
                   ))}
                 </ul>
@@ -219,14 +219,14 @@ const Pricing = () => {
                 variants={fadeInUp}
               >
                 <Zap className="h-4 w-4 mr-2 animate-pulse" />
-              Fast delivery
+              {t('pricing.fast_delivery')}
               </motion.div>
               <motion.div 
                 className="flex items-center hover:scale-105 transition-transform duration-300 micro-magnetic cursor-hover"
                 variants={fadeInUp}
               >
                 <Star className="h-4 w-4 mr-2 animate-pulse" />
-              Quality guaranteed
+              {t('pricing.quality_guaranteed')}
               </motion.div>
             </motion.div>
           </div>
