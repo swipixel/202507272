@@ -1,0 +1,73 @@
+{
+  "header": {
+    "services": "Szolgáltatások",
+    "portfolio": "Portfólió",
+    "pricing": "Árak",
+    "contact": "Kapcsolat",
+    "get_quote": "Ajánlatkérés"
+  },
+  "hero": {
+    "title": "Gyorsan Megjavítom Törött Weboldalát",
+    "subtitle": "Professzionális webfejlesztő, aki törött weboldalak mentésére, elavult tervek modernizálására és teljesítmény növelésére specializálódott. 72 órán belül újra online lesz az oldala.",
+    "cta": "Weboldal Javítása",
+    "guarantee_72h": "72 órás szállítási garancia",
+    "guarantee_satisfaction": "100% elégedettség",
+    "guarantee_experience": "5+ év tapasztalat",
+    "stats_fixed": "Megjavított Weboldalak",
+    "stats_delivery": "Átlagos Szállítás",
+    "stats_satisfaction": "Ügyfél Elégedettség"
+  },
+  "services": {
+    "title": "Amit Javítok és Fejlesztek",
+    "subtitle": "A hibás funkcióktól az elavult tervekig specializálódtam a weboldalak újjáélesztésére és jobbá tételére, mint valaha.",
+    "repair_title": "Weboldal Javítás",
+    "repair_description": "Javítsa a hibás funkciókat, oldja meg a hibákat, és állítsa vissza weboldalát a teljes működőképességre.",
+    "performance_title": "Teljesítmény Optimalizálás",
+    "performance_description": "Gyorsítsa fel a lassú weboldalakat fejlett optimalizálási technikákkal és modern bevált gyakorlatokkal.",
+    "emergency_title": "Sürgősségi Weboldal Javítások",
+    "emergency_subtitle": "Teljesen leállt a weboldala? Sürgős javításra van szüksége? 24 órás sürgősségi javítási szolgáltatásokat kínálok.",
+    "emergency_cta": "Sürgősségi Segítség Kérése"
+  },
+  "portfolio": {
+    "title": "Sikertörténetek",
+    "subtitle": "Valódi weboldalak, amelyeket megmentettem és átalakítottam. Tekintse meg a drámai javulásokat a teljesítményben, a designban és a felhasználói élményben.",
+    "previous": "Előző",
+    "next": "Következő"
+  },
+  "pricing": {
+    "title": "Átlátható Árazás",
+    "subtitle": "Nincsenek rejtett díjak, nincsenek óradíjas meglepetések. Válassza ki az igényeinek megfelelő csomagot, és gyorsan javítsa meg weboldalát.",
+    "quick_fix_name": "Gyors Javítás",
+    "quick_fix_description": "Tökéletes sürgős javításokhoz és kisebb problémákhoz",
+    "quick_fix_cta": "Javítsa Meg Weboldalamat",
+    "complete_rescue_name": "Teljes Mentés",
+    "complete_rescue_description": "Átfogó weboldal helyreállítás és fejlesztés",
+    "complete_rescue_cta": "Mentse Meg Weboldalamat",
+    "full_transformation_name": "Teljes Átalakítás",
+    "full_transformation_description": "Teljes weboldal átalakítás és modernizálás",
+    "full_transformation_cta": "Alakítsa Át Weboldalamat",
+    "popular_tag": "Legnépszerűbb",
+    "guarantee_title": "100% Elégedettségi Garancia",
+    "guarantee_subtitle": "Nem elégedett az eredménnyel? Visszakapja a pénzét, kérdés nélkül. Minden projekt mögött teljes elégedettségi garanciával állok.",
+    "guarantee_money_back": "Pénzvisszafizetési garancia"
+  },
+  "contact": {
+    "title": "Ingyenes Weboldal Felmérés",
+    "subtitle": "Küldje el weboldala URL-jét, és részletes jelentést adok arról, mi a hiba és hogyan javítható – teljesen ingyenesen, kötelezettség nélkül.",
+    "form_name_label": "Az Ön Neve *",
+    "form_email_label": "E-mail Cím *",
+    "form_message_label": "Írja Le Problémáit *",
+    "form_submit_button": "Üzenet Küldése és Ingyenes Felmérés",
+    "form_sending": "Küldés...",
+    "message_sent_title": "Üzenet Elküldve!",
+    "message_sent_text": "Köszönjük, hogy felvette velünk a kapcsolatot! Átnézem weboldalát, és 2 órán belül részletes értékeléssel és időtervvel válaszolok.",
+    "send_another_message": "Új Üzenet Küldése"
+  },
+  "footer": {
+    "description": "Professzionális webfejlesztő, aki törött weboldalak mentésére és újjáélesztésére specializálódott.",
+    "services_heading": "Szolgáltatások",
+    "quick_links_heading": "Gyors Linkek",
+    "contact_heading": "Kapcsolat",
+    "copyright": "© 2025 SwiPixel. Minden jog fenntartva."
+  }
+}
