@@ -29,6 +29,12 @@
     "emergency_cta": "Sürgős Segítség Kérése",
     "security_title": "Biztonsági Frissítések",
     "security_description": "Javítsa ki a sebezhetőségeket, frissítse az elavult kódot, és alkalmazza a biztonsági legjobb gyakorlatokat."
+    "design_title":"Dizájn Modernizálás",
+    "design_description":"Frissítse az elavult dizájnokat modern esztétikával és jobb felhasználói élménnyel.",
+    "mobile_title":"Tökéletes élmény Mobilra",
+    "seo_description":"Tedd weboldalad tökéletes megjelenésűvé minden eszközön reszponzív dizájnfrissítésekkel.",
+    "seo_title":"Seo Optimalizálás",
+    "seo_description":"Javítsa a keresési rangsorolását technikai SEO-javításokkal és optimalizálási stratégiákkal."
   },
   "portfolio": {
     "title": "Sikertörténetek",
