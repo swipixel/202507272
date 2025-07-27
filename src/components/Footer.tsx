@@ -2,10 +2,12 @@ import React from 'react';
 import { Code, Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useScrollAnimation, fadeInUp, staggerContainer, sectionTransition } from '../hooks/useScrollAnimation';
-import Logo from '/public/logo.png'
+import Logo from '/public/logo.png';
+import { useTranslation } from 'react-i18next'; // Import useTranslation
 
 const Footer = () => {
   const { ref, isInView } = useScrollAnimation(0.1);
+  const { t } = useTranslation(); // Initialize useTranslation
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -43,12 +45,11 @@ const Footer = () => {
           {/* Brand */}
           <motion.div className="md:col-span-1" variants={fadeInUp}>
             <div className="flex items-center space-x-2 mb-4">
-              {/*<Code className="h-8 w-8 text-blue-400 animate-pulse micro-icon cursor-magnetic" />*/}
               <img src={Logo} alt="logo" className="w-[15%]" />
               <span className="text-xl font-bold text-white hover:text-blue-400 transition-colors duration-300 cursor-magnetic">SwiPixel</span>
             </div>
             <p className="text-gray-400 mb-4">
-              Professional web developer specializing in rescuing broken websites and bringing them back to life.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               <div className="w-10 h-10 bg-gray-800/80 border border-gray-700/50 rounded-full flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 transition-all duration-300 cursor-pointer hover:scale-110 micro-scale cursor-magnetic">
@@ -62,31 +63,31 @@ const Footer = () => {
 
           {/* Services */}
           <motion.div variants={fadeInUp}>
-            <h3 className="text-white font-semibold mb-4 hover:text-blue-400 transition-colors duration-300 micro-text cursor-hover">Services</h3>
+            <h3 className="text-white font-semibold mb-4 hover:text-blue-400 transition-colors duration-300 micro-text cursor-hover">{t('footer.services_heading')}</h3>
             <motion.ul className="space-y-2" variants={staggerContainer}>
-              <motion.li variants={fadeInUp}><a href="#" className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block micro-text cursor-hover">Website Repair</a></motion.li>
-              <motion.li variants={fadeInUp}><a href="#" className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block micro-text cursor-hover">Performance Optimization</a></motion.li>
-              <motion.li variants={fadeInUp}><a href="#" className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block micro-text cursor-hover">Security Updates</a></motion.li>
-              <motion.li variants={fadeInUp}><a href="#" className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block micro-text cursor-hover">Mobile Optimization</a></motion.li>
-              <motion.li variants={fadeInUp}><a href="#" className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block micro-text cursor-hover">SEO Fixes</a></motion.li>
+              <motion.li variants={fadeInUp}><a href="#" className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block micro-text cursor-hover">{t('services.repair_title')}</a></motion.li>
+              <motion.li variants={fadeInUp}><a href="#" className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block micro-text cursor-hover">{t('services.performance_title')}</a></motion.li>
+              <motion.li variants={fadeInUp}><a href="#" className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block micro-text cursor-hover">{t('services.security_title')}</a></motion.li>
+              <motion.li variants={fadeInUp}><a href="#" className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block micro-text cursor-hover">{t('services.mobile_title')}</a></motion.li>
+              <motion.li variants={fadeInUp}><a href="#" className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block micro-text cursor-hover">{t('services.seo_title')}</a></motion.li>
             </motion.ul>
           </motion.div>
 
           {/* Quick Links */}
           <motion.div variants={fadeInUp}>
-            <h3 className="text-white font-semibold mb-4 hover:text-blue-400 transition-colors duration-300 micro-text cursor-hover">Quick Links</h3>
+            <h3 className="text-white font-semibold mb-4 hover:text-blue-400 transition-colors duration-300 micro-text cursor-hover">{t('footer.quick_links_heading')}</h3>
             <motion.ul className="space-y-2" variants={staggerContainer}>
-              <motion.li variants={fadeInUp}><button onClick={() => scrollToSection('services')} className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 micro-text cursor-hover">Services</button></motion.li>
-              <motion.li variants={fadeInUp}><button onClick={() => scrollToSection('portfolio')} className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 micro-text cursor-hover">Portfolio</button></motion.li>
-              <motion.li variants={fadeInUp}><button onClick={() => scrollToSection('pricing')} className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 micro-text cursor-hover">Pricing</button></motion.li>
-              <motion.li variants={fadeInUp}><button onClick={() => scrollToSection('contact')} className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 micro-text cursor-hover">Contact</button></motion.li>
+              <motion.li variants={fadeInUp}><button onClick={() => scrollToSection('services')} className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 micro-text cursor-hover">{t('header.services')}</button></motion.li>
+              <motion.li variants={fadeInUp}><button onClick={() => scrollToSection('portfolio')} className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 micro-text cursor-hover">{t('header.portfolio')}</button></motion.li>
+              <motion.li variants={fadeInUp}><button onClick={() => scrollToSection('pricing')} className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 micro-text cursor-hover">{t('header.pricing')}</button></motion.li>
+              <motion.li variants={fadeInUp}><button onClick={() => scrollToSection('contact')} className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 micro-text cursor-hover">{t('header.contact')}</button></motion.li>
               <motion.li variants={fadeInUp}><a href="#" className="text-gray-400 hover:text-white hover:translate-x-2 transition-all duration-300 inline-block micro-text cursor-hover">Privacy Policy</a></motion.li>
             </motion.ul>
           </motion.div>
 
           {/* Contact Info */}
           <motion.div variants={fadeInUp}>
-            <h3 className="text-white font-semibold mb-4 hover:text-blue-400 transition-colors duration-300 micro-text cursor-hover">Contact</h3>
+            <h3 className="text-white font-semibold mb-4 hover:text-blue-400 transition-colors duration-300 micro-text cursor-hover">{t('footer.contact_heading')}</h3>
             <motion.div className="space-y-3" variants={staggerContainer}>
               <motion.div 
                 className="flex items-center text-gray-400 hover:text-white hover:scale-105 transition-all duration-300 micro-magnetic cursor-hover"
@@ -124,7 +125,7 @@ const Footer = () => {
             className="text-gray-400 text-sm hover:text-gray-300 transition-colors duration-300"
             variants={fadeInUp}
           >
-            © 2025 SwiPixel. All rights reserved.
+            {t('footer.copyright')}
           </motion.p>
           
           <motion.button

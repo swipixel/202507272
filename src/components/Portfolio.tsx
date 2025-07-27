@@ -9,55 +9,65 @@ import {
   slideInRight,
   sectionTransition,
 } from '../hooks/useScrollAnimation';
+import { useTranslation } from 'react-i18next'; // Import useTranslation
 
 const Portfolio = () => {
   const [activeProject, setActiveProject] = useState(0);
   const { ref, isInView } = useScrollAnimation(0.1);
+  const { t } = useTranslation(); // Initialize useTranslation
 
   const projects = [
     {
-      title: "E-commerce Site Revival",
-      category: "Performance & Functionality",
-      description:
-        "Rescued a broken e-commerce site with 3-second load times and 40% cart abandonment. Reduced load time to 0.8s and increased conversions by 65%.",
+      titleKey: "portfolio.projects.ecommerce.title",
+      categoryKey: "portfolio.projects.ecommerce.category",
+      descriptionKey: "portfolio.projects.ecommerce.description",
       image:
         "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      results: [
-        "65% increase in conversions",
-        "0.8s load time",
-        "40% reduced bounce rate",
+      resultsKeys: [
+        "portfolio.projects.ecommerce.results.conversion",
+        "portfolio.projects.ecommerce.results.load_time",
+        "portfolio.projects.ecommerce.results.bounce_rate"
       ],
     },
     {
-      title: "Restaurant Website Modernization",
-      category: "Design & Mobile",
-      description:
-        "Transformed an outdated restaurant website into a modern, mobile-first experience with online ordering integration.",
+      titleKey: "portfolio.projects.restaurant.title",
+      categoryKey: "portfolio.projects.restaurant.category",
+      descriptionKey: "portfolio.projects.restaurant.description",
       image:
         "https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["WordPress", "CSS3", "JavaScript", "PHP"],
-      results: ["Mobile traffic +120%", "Online orders +200%", "User engagement +85%"],
+      resultsKeys: [
+        "portfolio.projects.restaurant.results.mobile_traffic",
+        "portfolio.projects.restaurant.results.online_orders",
+        "portfolio.projects.restaurant.results.user_engagement"
+      ],
     },
     {
-      title: "Corporate Site Security Fix",
-      category: "Security & SEO",
-      description:
-        "Fixed critical security vulnerabilities and implemented SEO best practices for a corporate website, recovering from Google penalties.",
+      titleKey: "portfolio.projects.corporate.title",
+      categoryKey: "portfolio.projects.corporate.category",
+      descriptionKey: "portfolio.projects.corporate.description",
       image:
         "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["Laravel", "MySQL", "Redis", "Cloudflare"],
-      results: ["100% security score", "SEO ranking +300%", "Page speed +90%"],
+      resultsKeys: [
+        "portfolio.projects.corporate.results.security_score",
+        "portfolio.projects.corporate.results.seo_ranking",
+        "portfolio.projects.corporate.results.page_speed"
+      ],
     },
     {
-      title: "SaaS Platform Optimization",
-      category: "Performance & UX",
-      description:
-        "Optimized a slow SaaS platform, fixing database queries and implementing modern UI/UX patterns to improve user retention.",
+      titleKey: "portfolio.projects.saas.title",
+      categoryKey: "portfolio.projects.saas.category",
+      descriptionKey: "portfolio.projects.saas.description",
       image:
         "https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["Vue.js", "PostgreSQL", "Docker", "AWS"],
-      results: ["5x faster queries", "User retention +45%", "Support tickets -60%"],
+      resultsKeys: [
+        "portfolio.projects.saas.results.faster_queries",
+        "portfolio.projects.saas.results.user_retention",
+        "portfolio.projects.saas.results.support_tickets"
+      ],
     },
   ];
 
@@ -93,14 +103,13 @@ const Portfolio = () => {
           animate={isInView ? 'visible' : 'hidden'}
         >
           <motion.h2 className="text-3xl md:text-4xl font-bold text-white mb-4" variants={fadeInUp}>
-            Success Stories
+            {t('portfolio.title')}
           </motion.h2>
           <motion.p
             className="text-xl text-gray-300 max-w-3xl mx-auto"
             variants={fadeInUp}
           >
-            Real websites I've rescued and transformed. See the dramatic improvements
-            in performance, design, and user experience.
+            {t('portfolio.subtitle')}
           </motion.p>
         </motion.div>
 
@@ -121,7 +130,7 @@ const Portfolio = () => {
                   <motion.img
                     key={activeProject}
                     src={projects[activeProject].image}
-                    alt={projects[activeProject].title}
+                    alt={t(projects[activeProject].titleKey)}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     initial={{ opacity: 0, scale: 1.1 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -144,20 +153,20 @@ const Portfolio = () => {
                   >
                     <div className="mb-4">
                       <span className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        {projects[activeProject].category}
+                        {t(projects[activeProject].categoryKey)}
                       </span>
                     </div>
 
                     <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 animate-text-glow">
-                      {projects[activeProject].title}
+                      {t(projects[activeProject].titleKey)}
                     </h3>
 
                     <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-                      {projects[activeProject].description}
+                      {t(projects[activeProject].descriptionKey)}
                     </p>
 
                     <div className="mb-6">
-                      <h4 className="text-white font-semibold mb-2">Technologies Used:</h4>
+                      <h4 className="text-white font-semibold mb-2">{t('portfolio.technologies_used')}</h4>
                       <div className="flex flex-wrap gap-2">
                         {projects[activeProject].technologies.map((tech, index) => (
                           <span
@@ -171,26 +180,19 @@ const Portfolio = () => {
                     </div>
 
                     <div className="mb-8">
-                      <h4 className="text-white font-semibold mb-3">Key Results:</h4>
+                      <h4 className="text-white font-semibold mb-3">{t('portfolio.key_results')}</h4>
                       <div className="grid grid-cols-1 gap-2">
-                        {projects[activeProject].results.map((result, index) => (
+                        {projects[activeProject].resultsKeys.map((resultKey, index) => (
                           <div
                             key={index}
                             className="flex items-center text-emerald-400 hover:text-emerald-300 transition-colors duration-300"
                           >
                             <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3 animate-pulse"></div>
-                            {result}
+                            {t(resultKey)}
                           </div>
                         ))}
                       </div>
                     </div>
-
-                    {/*<div className="flex gap-4">
-                      <button className="flex items-center bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group micro-button cursor-magnetic">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        View Case Study
-                      </button>
-                    </div>*/}
                   </motion.div>
                 </AnimatePresence>
               </motion.div>
@@ -211,7 +213,7 @@ const Portfolio = () => {
               whileTap={{ scale: 0.98 }}
             >
               <ArrowLeft className="h-5 w-5 mr-2 group-hover:-translate-x-1 transition-transform duration-300" />
-              Previous
+              {t('portfolio.previous')}
             </motion.button>
 
             <div className="flex space-x-2">
@@ -236,7 +238,7 @@ const Portfolio = () => {
               whileHover={{ scale: 1.05, x: 5 }}
               whileTap={{ scale: 0.98 }}
             >
-              Next
+              {t('portfolio.next')}
               <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </motion.button>
           </motion.div>

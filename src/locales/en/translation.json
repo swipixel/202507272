@@ -1,0 +1,176 @@
+{
+  "header": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "get_quote": "Get Quote"
+  },
+  "hero": {
+    "title": "Fix Your Broken Website Fast",
+    "subtitle": "Professional web developer specializing in rescuing broken websites, modernizing outdated designs, and boosting performance. Get your site back online in 72 hours.",
+    "cta": "Get Your Website Fixed",
+    "guarantee_72h": "72h delivery guarantee",
+    "guarantee_satisfaction": "100% satisfaction",
+    "guarantee_experience": "5+ years experience",
+    "stats_fixed": "Websites Fixed",
+    "stats_delivery": "Average Delivery",
+    "stats_satisfaction": "Client Satisfaction"
+  },
+  "services": {
+    "title": "What I Fix & Improve",
+    "subtitle": "From broken functionality to outdated designs, I specialize in bringing websites back to life and making them better than ever.",
+    "repair_title": "Website Repair",
+    "repair_description": "Fix broken functionality, resolve errors, and restore your website to full working order.",
+    "performance_title": "Performance Optimization",
+    "performance_description": "Speed up slow websites with advanced optimization techniques and modern best practices.",
+    "mobile_title": "Mobile Responsiveness",
+    "mobile_description": "Ensure your website looks and functions perfectly on all devices, from desktops to smartphones.",
+    "security_title": "Website Security",
+    "security_description": "Protect your site from malware, hackers, and vulnerabilities with comprehensive security audits and fixes.",
+    "seo_title": "SEO Optimization",
+    "seo_description": "Improve your search engine rankings and drive organic traffic with expert SEO strategies.",
+    "design_title": "Design Refresh",
+    "design_description": "Modernize your website's look and feel with a fresh, user-friendly design that converts.",
+    "emergency_title": "Emergency Website Fixes",
+    "emergency_subtitle": "Website completely down? Need an urgent fix? I offer 24-hour emergency repair services.",
+    "emergency_cta": "Get Emergency Help"
+  },
+  "portfolio": {
+    "title": "Success Stories",
+    "subtitle": "Real websites I've rescued and transformed. See the dramatic improvements in performance, design, and user experience.",
+    "previous": "Previous",
+    "next": "Next",
+    "technologies_used": "Technologies Used",
+    "key_results": "Key Results",
+    "projects": {
+      "ecommerce": {
+        "title": "E-commerce Site Revival",
+        "category": "Performance & Functionality",
+        "description": "Rescued a broken e-commerce site with 3-second load times and 40% cart abandonment. Reduced load time to 0.8s and increased conversions by 65%.",
+        "results": {
+          "conversion": "65% increase in conversions",
+          "load_time": "0.8s load time",
+          "bounce_rate": "40% reduced bounce rate"
+        }
+      },
+      "restaurant": {
+        "title": "Restaurant Website Modernization",
+        "category": "Design & Mobile",
+        "description": "Transformed an outdated restaurant website into a modern, mobile-first experience with online ordering integration.",
+        "results": {
+          "mobile_traffic": "Mobile traffic +120%",
+          "online_orders": "Online orders +200%",
+          "user_engagement": "User engagement +85%"
+        }
+      },
+      "corporate": {
+        "title": "Corporate Site Security Fix",
+        "category": "Security & SEO",
+        "description": "Fixed critical security vulnerabilities and implemented SEO best practices for a corporate website, recovering from Google penalties.",
+        "results": {
+          "security_score": "100% security score",
+          "seo_ranking": "SEO ranking +300%",
+          "page_speed": "Page speed +90%"
+        }
+      },
+      "saas": {
+        "title": "SaaS Platform Optimization",
+        "category": "Performance & UX",
+        "description": "Optimized a slow SaaS platform, fixing database queries and implementing modern UI/UX patterns to improve user retention.",
+        "results": {
+          "faster_queries": "5x faster queries",
+          "user_retention": "User retention +45%",
+          "support_tickets": "Support tickets -60%"
+        }
+      }
+    }
+  },
+  "pricing": {
+    "title": "Transparent Pricing",
+    "subtitle": "No hidden fees, no hourly billing surprises. Choose the package that fits your needs and get your website fixed fast.",
+    "quick_fix_name": "Quick Fix",
+    "quick_fix_description": "Perfect for urgent fixes and minor issues",
+    "quick_fix_cta": "Fix My Website",
+    "quick_fix": {
+      "features": {
+        "bug_fixes": "Bug fixes and error resolution",
+        "basic_performance": "Basic performance optimization",
+        "mobile_check": "Mobile responsiveness check",
+        "revisions": "2 rounds of revisions",
+        "delivery": "48-hour delivery",
+        "email_support": "Email support"
+      }
+    },
+    "complete_rescue_name": "Complete Rescue",
+    "complete_rescue_description": "Comprehensive website restoration and improvement",
+    "complete_rescue_cta": "Rescue My Website",
+    "complete_rescue": {
+      "features": {
+        "everything_quick_fix": "Everything in Quick Fix",
+        "security_audit": "Full security audit & fixes",
+        "seo_optimization": "SEO optimization",
+        "design_improvements": "Design improvements",
+        "performance_optimization": "Performance optimization",
+        "content_migration": "Content migration"
+      }
+    },
+    "full_transformation_name": "Full Transformation",
+    "full_transformation_description": "Complete website overhaul and modernization",
+    "full_transformation_cta": "Transform My Website",
+    "full_transformation": {
+      "features": {
+        "everything_complete_rescue": "Everything in Complete Rescue",
+        "design_overhaul": "Modern design overhaul",
+        "custom_functionality": "Custom functionality",
+        "advanced_seo": "Advanced SEO setup",
+        "analytics_implementation": "Analytics implementation",
+        "training_documentation": "Training & documentation",
+        "priority_support": "Priority support"
+      }
+    },
+    "popular_tag": "Most Popular",
+    "one_time": "one-time",
+    "delivered_in": "Delivered in",
+    "guarantee_title": "100% Satisfaction Guarantee",
+    "guarantee_subtitle": "Not happy with the results? Get your money back, no questions asked. I stand behind every project with a full satisfaction guarantee.",
+    "guarantee_money_back": "Money-back guarantee",
+    "fast_delivery": "Fast delivery",
+    "quality_guaranteed": "Quality guaranteed"
+  },
+  "contact": {
+    "title": "Get Your Free Website Assessment",
+    "subtitle": "Send me your website URL and I'll provide a detailed report of what's broken and how to fix it - completely free, no strings attached.",
+    "form_name_label": "Your Name *",
+    "form_email_label": "Email Address *",
+    "form_message_label": "Describe Your Issues *",
+    "form_submit_button": "Send Message & Get Free Assessment",
+    "form_sending": "Sending...",
+    "message_sent_title": "Message Sent!",
+    "message_sent_text": "Thanks for reaching out! I'll review your website and get back to you within 2 hours with a detailed assessment and timeline.",
+    "send_another_message": "Send Another Message",
+    "lets_talk": "Let's Talk",
+    "response_time": "Response Time",
+    "email": "Email",
+    "emergency_line": "Emergency Line",
+    "need_urgent_help": "Need Urgent Help?",
+    "urgent_help_description": "If your website is completely down or facing a critical issue, use our emergency line.",
+    "call_now": "Call Now",
+    "website_url": "Website URL",
+    "service_needed": "Service Needed",
+    "select_service": "Select a service",
+    "quick_fix_option": "Quick Fix",
+    "complete_rescue_option": "Complete Rescue",
+    "full_transformation_option": "Full Transformation",
+    "free_consultation_option": "Free Consultation",
+    "urgency_level": "Urgency Level",
+    "message_placeholder": "Tell me about your website's issues, what you've tried, and what you hope to achieve."
+  },
+  "footer": {
+    "description": "Professional web developer specializing in rescuing broken websites and bringing them back to life.",
+    "services_heading": "Services",
+    "quick_links_heading": "Quick Links",
+    "contact_heading": "Contact",
+    "copyright": "© 2025 SwiPixel. All rights reserved."
+  }
+}
