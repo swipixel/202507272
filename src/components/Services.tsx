@@ -2,40 +2,42 @@ import React from 'react';
 import { Wrench, Zap, Shield, Smartphone, Search, Palette } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useScrollAnimation, fadeInUp, staggerContainer, scaleIn, sectionTransition } from '../hooks/useScrollAnimation';
+import { useTranslation } from 'react-i18next'; // Import useTranslation
 
 const Services = () => {
   const { ref, isInView } = useScrollAnimation(0.1);
+  const { t } = useTranslation(); // Initialize useTranslation
 
   const services = [
     {
       icon: <Wrench className="h-8 w-8" />,
-      title: "Website Repair",
-      description: "Fix broken functionality, resolve errors, and restore your website to full working order."
+      title: t("services.repair_title"),
+      description: t("services.repair_description")
     },
     {
       icon: <Zap className="h-8 w-8" />,
-      title: "Performance Optimization",
-      description: "Speed up slow websites with advanced optimization techniques and modern best practices."
+      title: t("services.performance_title"),
+      description: t("services.performance_description")
     },
     {
       icon: <Smartphone className="h-8 w-8" />,
-      title: "Mobile Responsiveness",
-      description: "Make your website look perfect on all devices with responsive design updates."
+      title: t("services.mobile_title"),
+      description: t("services.mobile_description")
     },
     {
       icon: <Shield className="h-8 w-8" />,
-      title: "Security Updates",
-      description: "Patch vulnerabilities, update outdated code, and implement security best practices."
+      title: t("services.security_title"),
+      description: t("services.security_description")
     },
     {
       icon: <Search className="h-8 w-8" />,
-      title: "SEO Optimization",
-      description: "Improve search rankings with technical SEO fixes and optimization strategies."
+      title: t("services.seo_title"),
+      description: t("services.seo_description")
     },
     {
       icon: <Palette className="h-8 w-8" />,
-      title: "Design Modernization",
-      description: "Update outdated designs with modern aesthetics and improved user experience."
+      title: t("services.design_title"),
+      description: t("services.design_description")
     }
   ];
 
@@ -66,14 +68,13 @@ const Services = () => {
             className="text-3xl md:text-4xl font-bold text-white mb-4"
             variants={fadeInUp}
           >
-            What I Fix & Improve
+            {t('services.title')}
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-300 max-w-3xl mx-auto"
             variants={fadeInUp}
           >
-            From broken functionality to outdated designs, I specialize in bringing websites back to life 
-            and making them better than ever.
+            {t('services.subtitle')}
           </motion.p>
         </motion.div>
 
@@ -116,15 +117,15 @@ const Services = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold mb-4 animate-text-glow">Emergency Website Fixes</h3>
+              <h3 className="text-2xl font-bold mb-4 animate-text-glow">{t('services.emergency_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-              Website completely down? Need an urgent fix? I offer 24-hour emergency repair services.
+                {t('services.emergency_subtitle')}
               </p>
               <button 
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg animate-bounce-subtle micro-button cursor-magnetic"
               >
-                Get Emergency Help
+                {t('services.emergency_cta')}
               </button>
             </div>
           </motion.div>
