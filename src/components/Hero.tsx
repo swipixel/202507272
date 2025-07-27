@@ -4,9 +4,11 @@ import { motion } from 'framer-motion';
 import AnimatedBackground from './AnimatedBackground';
 import { useScrollAnimation, fadeInUp, staggerContainer, scaleIn } from '../hooks/useScrollAnimation';
 import { heroLoadVariants, staggeredLoadVariants } from '../hooks/usePageLoad';
+import { useTranslation } from 'react-i18next'; // Import useTranslation
 
 const Hero = () => {
   const { ref, isInView } = useScrollAnimation(0.2);
+  const { t } = useTranslation(); // Initialize useTranslation
 
   const scrollToContact = () => {
     const element = document.getElementById('contact');
@@ -40,7 +42,7 @@ const Hero = () => {
               animate="animate"
               transition={{ delay: 0.2 }}
             >
-              Fix Your Broken
+              {t('hero.title').split(' ')[0]} {t('hero.title').split(' ')[1]}
             </motion.span>
             <br />
             <motion.span 
@@ -50,7 +52,7 @@ const Hero = () => {
               animate="animate"
               transition={{ delay: 0.4 }}
             >
-              Website Fast
+              {t('hero.title').split(' ').slice(2).join(' ')}
             </motion.span>
           </motion.h1>
           
@@ -61,8 +63,7 @@ const Hero = () => {
             animate="animate"
             transition={{ delay: 0.6 }}
           >
-            Professional web developer specializing in rescuing broken websites, 
-            modernizing outdated designs, and boosting performance. Get your site back online in 72 hours.
+            {t('hero.subtitle')}
           </motion.p>
 
           <motion.button
@@ -75,7 +76,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
-            Get Your Website Fixed
+            {t('hero.cta')}
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
           </motion.button>
 
@@ -89,15 +90,15 @@ const Hero = () => {
           >
             <motion.div className="flex items-center" variants={fadeInUp}>
               <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 animate-pulse" />
-              72h delivery guarantee
+              {t('hero.guarantee_72h')}
             </motion.div>
             <motion.div className="flex items-center" variants={fadeInUp}>
               <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 animate-pulse" />
-              100% satisfaction
+              {t('hero.guarantee_satisfaction')}
             </motion.div>
             <motion.div className="flex items-center" variants={fadeInUp}>
               <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 animate-pulse" />
-              5+ years experience
+              {t('hero.guarantee_experience')}
             </motion.div>
           </motion.div>
 
@@ -115,7 +116,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
             >
               <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2 animate-counter group-hover:text-blue-300">150+</div>
-              <div className="text-gray-400">Websites Fixed</div>
+              <div className="text-gray-400">{t('hero.stats_fixed')}</div>
             </motion.div>
             <motion.div 
               className="text-center group hover:scale-105 transition-transform duration-300 micro-magnetic cursor-hover"
@@ -123,7 +124,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
             >
               <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2 animate-counter group-hover:text-purple-300">72h</div>
-              <div className="text-gray-400">Average Delivery</div>
+              <div className="text-gray-400">{t('hero.stats_delivery')}</div>
             </motion.div>
             <motion.div 
               className="text-center group hover:scale-105 transition-transform duration-300 micro-magnetic cursor-hover"
@@ -131,7 +132,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
             >
               <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2 animate-counter group-hover:text-emerald-300">98%</div>
-              <div className="text-gray-400">Client Satisfaction</div>
+              <div className="text-gray-400">{t('hero.stats_satisfaction')}</div>
             </motion.div>
           </motion.div>
         </div>
